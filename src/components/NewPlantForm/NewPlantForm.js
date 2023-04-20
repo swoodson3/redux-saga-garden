@@ -19,6 +19,10 @@ const NewPlantForm = () => {
         //updates the next plant to have a new id
         setPlant({id:newPlant.id + 1, name: ''});
     }
+
+
+
+    
     return (
         <div>
             <h3>This is the form</h3>

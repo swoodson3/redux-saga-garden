@@ -13,6 +13,7 @@ function PlantList() {
     useEffect(() => {
        dispatch({ type: 'FETCH_PLANT' });
         console.log('component did mount');
+
         // dispatch an action to request the plantList from the API
     }, []); 
 

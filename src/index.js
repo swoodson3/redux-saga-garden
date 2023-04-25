@@ -35,6 +35,19 @@ function* fetchPlant() {
  }
 }
 
+
+function* postPlant(action) {
+  try {
+      yield axios.post('/api/plant', action.payload);
+      // Call the GET
+      yield put({ type: 'FETCH_' })
+      // We can pass functions through actions
+      action.setNewElement('')
+  } catch (error) {
+      console.log(`error is postElement`);
+      alert('Something went wrong!');
+  }
+}
 function* rootSaga() {
   //! Do not use the same action as the reducer
   yield takeEvery('FETCH_PLANT', fetchPlant )
